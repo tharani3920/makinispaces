@@ -645,4 +645,74 @@ const imageWrappers = document.querySelectorAll('.image-wrapper');
   });
   
   
+  $(document).ready(function(){
+
+    let serviceDetails = document.querySelectorAll('.service-details');
+    serviceDetails.forEach(function(element, index) {
+      if (index > 0) {
+        element.style.display = 'none';
+      }
+    });
+      let x = document.URL;
+      if (x.includes("#")){
+      x = x.split("#");
+    const name =`#${x[x.length - 1]}` ;
+    
+    if($(name).not('.active')){
+      $(name).addClass('active');
+      $(name).siblings().removeClass('active');
+    }
+    var dataTarget = $(name).attr("data-target");
+    $(dataTarget).fadeIn();
+        $(dataTarget).siblings().hide();
+        $("html, body").animate({
+          scrollTop: 0
+      }, "slow");
+  }
+        $(".sidebar-menu-layout1>ul>li").click(function(){
+        if($('.sidebar-menu-layout1>ul>li').not('.active')){
+          $(this).addClass('active');
+          $(this).siblings().removeClass('active');
+        }
+        var dataTarget = $(this).attr("data-target");
+        $(dataTarget).fadeIn();
+        $(dataTarget).siblings().hide();
+        });
+        
+    });
   
+    $(document).ready(function(){
+
+      let serviceDetailss = document.querySelectorAll('.service-details-two');
+      serviceDetailss.forEach(function(element, index) {
+        if (index > 0) {
+          element.style.display = 'none';
+        }
+      });
+        let x = document.URL;
+        if (x.includes("#")){
+        x = x.split("#");
+      const name =`#${x[x.length - 1]}` ;
+      
+      if($(name).not('.active')){
+        $(name).addClass('active');
+        $(name).siblings().removeClass('active');
+      }
+      var dataTarget = $(name).attr("data-target");
+      $(dataTarget).fadeIn();
+          $(dataTarget).siblings().hide();
+          $("html, body").animate({
+            scrollTop: 0
+        }, "slow");
+    }
+          $(".sidebar-menu-layout1-two>ul>li").click(function(){
+          if($('.sidebar-menu-layout1-two>ul>li').not('.active')){
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+          }
+          var dataTarget = $(this).attr("data-target");
+          $(dataTarget).fadeIn();
+          $(dataTarget).siblings().hide();
+          });
+          
+      });
