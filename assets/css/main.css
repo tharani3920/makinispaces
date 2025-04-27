@@ -1972,6 +1972,9 @@ nav.navbar ul.sub-menu li {
 .logo {
   z-index: 1;
 }
+.logo a img{
+  width: 200px;
+}
 
 .header-search i {
   color: #ffffff;
