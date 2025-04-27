@@ -599,6 +599,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
 const imageWrappers = document.querySelectorAll('.image-wrapper');
 
   imageWrappers.forEach(wrapper => {
@@ -716,3 +717,28 @@ const imageWrappers = document.querySelectorAll('.image-wrapper');
           });
           
       });
+
+      const link = document.getElementById('banashankari-link');
+  
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // stop normal link behavior
+    
+        // Navigate first
+        window.location.href = 'our-projects-2.html?location=banashankari';
+      });
+
+  window.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const location = params.get('location'); // get location=banashankari
+
+    if (location === 'banashankari') {
+      // Example: Show only Banashankari project
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (!card.classList.contains('banashankari')) {
+          card.style.display = 'none'; // Hide other projects
+        }
+      });
+    }
+  });
+
+document.getElementById("footer-date").textContent = new Date().getFullYear();
