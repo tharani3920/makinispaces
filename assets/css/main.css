@@ -10934,12 +10934,7 @@ input[type=radio]:checked:after {
     line-height: 55px;
   }
 }
-@media (max-width: 768px) {
-  .bannr h1 {
-    font-size: 40px;
-    line-height: 45px;
-  }
-}
+
 @media (max-width: 410px) {
   .bannr h1 {
     font-size: 32px;
@@ -11174,4 +11169,20 @@ body.popup-active {
   100% {
     transform: rotate(360deg);
   }
+}
+@media (max-width: 768px) {
+  .bannr h1 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .circle-text {
+    top: -9px;
+    left: -10px;
+}
+}
+@media (max-width: 556px) {
+    .circle-text {
+    width: 140px;
+    height: 140px;
+}
 }
