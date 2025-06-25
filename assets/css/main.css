@@ -303,7 +303,7 @@ i#nav-icon4 {
   margin-bottom: 30px;
 }
 .res-log img {
-  width: auto;
+    width: 200px;
 }
 
 .res-rights p {
@@ -8254,7 +8254,7 @@ ul.awards li:hover .award-time {
 
 .construction-img-two {
   position: relative;
-  z-index: 111;
+  z-index: 1;
 }
 @media (max-width: 992px) {
   .construction-img-two {
